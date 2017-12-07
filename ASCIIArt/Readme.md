@@ -12,7 +12,7 @@ Output width must be less than or equal to the width of the image (number of pix
 
 ## Modifications
 
-You can change the character set used by changing **AscArt.OutputCharSet**.  As an experiment, you can try **OutputCharSetAlternate**. The character sets should be in order of decreasing "brightness".
+You can change the character set used by changing **AscArt.OutputCharSet**.  As an experiment, you can try **OutputCharSetAlternate**. The characters in the char sets should be in order of decreasing "brightness".
 
 ## Example
 
