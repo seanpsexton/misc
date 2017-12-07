@@ -1,0 +1,79 @@
+﻿<Window x:Class="WaveSim.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Rain" Height="679.023" Width="812.646"
+    MouseWheel="Window_MouseWheel">
+    
+    <Grid Grid.IsSharedSizeScope="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="A"/>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="A"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Apologies for lack of data binding or use of a ViewModel.  This was written a number of years ago, during the first -->
+        <!-- few weeks that I was learning WPF.  - Sean    -->
+        
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="10,10,0,0" Text="Num Drops"/>
+        <Slider Grid.Row="0" Grid.Column="1" Name="slidNumDrops" Margin="15,10,0,0" Maximum="1000" Minimum="1" ValueChanged="slidNumDrops_ValueChanged"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="2" Margin="20,10,0,0" Text="Drop Strength"/>
+        <Slider Grid.Row="0" Grid.Column="3" Name="slidPeakHeight" Margin="15,10,0,0" ValueChanged="slidPeakHeight_ValueChanged" Minimum="0" Maximum="15"/>
+
+        <Button Grid.Row="0" Grid.Column="4" Name="btnStart" Margin="10,10,0,0" VerticalAlignment="Center" Padding="10,7" Click="btnStart_Click" Content="Start Rain"/>
+        <Button Grid.Row="0" Grid.Column="5" Margin="5,10,10,0" Padding="10,7" VerticalAlignment="Center" Click="btnWave_Click" Content="Wave !"/>
+        
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,10,0,0" Text="Drop Size"/>
+        <Slider Grid.Row="1" Grid.Column="1" Margin="15,10,0,0" Minimum="1" Maximum="6" Name="slidDropSize" ValueChanged="slidDropSize_ValueChanged"/>
+
+        <Viewport3D Name="viewport3D1" Grid.Row="2" Grid.ColumnSpan="6">
+            <Viewport3D.Camera>
+                <PerspectiveCamera x:Name="camMain" Position="255 38.5 255" LookDirection="-130 -40 -130" FarPlaneDistance="450" UpDirection="0,1,0" NearPlaneDistance="1" FieldOfView="70">
+
+                </PerspectiveCamera>
+            </Viewport3D.Camera>
+            <ModelVisual3D x:Name="vis3DLighting">
+                <ModelVisual3D.Content>
+                    <DirectionalLight x:Name="dirLightMain" Direction="2, -2, 0"/>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <DirectionalLight Direction="0, -2, 2"/>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <GeometryModel3D x:Name="gmodMain">
+                        <GeometryModel3D.Geometry>
+                            <MeshGeometry3D x:Name="meshMain" >
+                            </MeshGeometry3D>
+                        </GeometryModel3D.Geometry>
+                        <GeometryModel3D.Material>
+                            <MaterialGroup>
+                                <DiffuseMaterial x:Name="matDiffuseMain">
+                                    <DiffuseMaterial.Brush>
+                                        <SolidColorBrush Color="DarkBlue"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                                <SpecularMaterial SpecularPower="24">
+                                    <SpecularMaterial.Brush>
+                                        <SolidColorBrush Color="LightBlue"/>
+                                    </SpecularMaterial.Brush>
+                                </SpecularMaterial>
+                            </MaterialGroup>
+                        </GeometryModel3D.Material>
+                    </GeometryModel3D>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+        </Viewport3D>
+    </Grid>
+</Window>
