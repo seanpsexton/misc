@@ -1,0 +1,16 @@
+﻿# ASCIIArt
+
+Simple .NET Framework console app that converts an image into an ASCII-based representation--"ASCII Art".
+
+https://en.wikipedia.org/wiki/ASCII_art
+
+## Usage
+
+ASCIIArt *input-file* *output-width-in-chars*
+
+Output width must be less than or equal to the width of the image (number of pixels).
+
+## Modifications
+
+You can change the character set used by changing **AscArt.OutputCharSet**.  As an experiment, you can try **OutputCharSetAlternate**. The character sets should be in order of decreasing "brightness".
+
