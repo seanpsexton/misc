@@ -12,6 +12,17 @@
     </Window.DataContext>
     
     <Grid>
-        <ListBox Margin="5" ItemsSource="{Binding Dogs}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <ListBox Grid.Column="0"
+                 Margin="5" ItemsSource="{Binding Dogs}"/>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <Button Content="Re-gen List" Command="{Binding RegenListCommand}"
+                    Margin="5" Padding="10,7"/>
+        </StackPanel>
     </Grid>
 </Window>

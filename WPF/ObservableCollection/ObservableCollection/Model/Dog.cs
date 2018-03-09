@@ -44,6 +44,9 @@ namespace TestApp.Model
             Breed = breed;
         }
 
+        // 1 MB
+        private byte[] _dogData = new byte[1048576];
+
         public override string ToString()
         {
             return string.Format("{0} ({1}) - {2}", Name, Age, Breed);
