@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepPropAttribute", "DepPropAttribute\DepPropAttribute.csproj", "{DC84C38A-21DB-4398-A6B1-876FD10FC8D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC84C38A-21DB-4398-A6B1-876FD10FC8D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC84C38A-21DB-4398-A6B1-876FD10FC8D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC84C38A-21DB-4398-A6B1-876FD10FC8D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC84C38A-21DB-4398-A6B1-876FD10FC8D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {377ACB19-B717-4282-859B-5E536C4D05C6}
+	EndGlobalSection
+EndGlobal
