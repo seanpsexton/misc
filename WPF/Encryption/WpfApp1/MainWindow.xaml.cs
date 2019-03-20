@@ -56,7 +56,7 @@ namespace WpfApp1
             //GCHandle gch = GCHandle.Alloc(password, GCHandleType.Pinned);
 
             // Decrypt the file
-            EncryptDecrypt. FileDecrypt(@"..\..\Stuff.txt.aes", @"..\..\Sutff-2.txt", password);
+            EncryptDecrypt. FileDecrypt(@"..\..\Stuff.txt.aes", @"..\..\Stuff-2.txt", password);
 
             // To increase the security of the decryption, delete the used password from the memory !
             //ZeroMemory(gch.AddrOfPinnedObject(), password.Length * 2);
