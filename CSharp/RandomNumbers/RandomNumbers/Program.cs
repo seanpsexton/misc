@@ -51,10 +51,10 @@ namespace RandomNumbers
             if (min > max)
                 throw new ArgumentOutOfRangeException("min", min, "Minimum must be less than or equal to maximum");
 
-            RNGCryptoServiceProvider rnd = new RNGCryptoServiceProvider();
+            //RNGCryptoServiceProvider rnd = new RNGCryptoServiceProvider();
             byte[] buff = new byte[4];
 
-            rnd.GetBytes(buff);
+            _rnd.GetBytes(buff);
             uint randUint = BitConverter.ToUInt32(buff, 0);
 
             // Algorithm works with range (0..1], i.e. exclude 0
