@@ -10,9 +10,14 @@ namespace ConsoleApp1
 
         public string DogContainerThing { get; set; }
         
+        // public override IContainer<IDog<double>> Copy()
+        // {
+        //     var dogCopy = Contained.Copy() as IDog<double>;
+        //     return new DogContainer(dogCopy, DogContainerThing);
+        // }
         public override IContainer<IDog<double>> Copy()
         {
-            var dogCopy = Contained.Copy() as IDog<double>;
+            var dogCopy = Contained.Copy();
             return new DogContainer(dogCopy, DogContainerThing);
         }
     }

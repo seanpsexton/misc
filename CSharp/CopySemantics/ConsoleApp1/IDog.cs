@@ -5,5 +5,7 @@ namespace ConsoleApp1
         where T : struct
     {
         string Breed { get; set; }
+
+        new IDog<T> Copy();
     }
 }
