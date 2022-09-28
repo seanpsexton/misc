@@ -10,7 +10,13 @@ namespace ConsoleApp1
         
         public string Breed { get; set; }
 
-        public override IAnimal<double> Copy()
+        // public override IAnimal<double> Copy()
+        // {
+        //     var newDog = new Dog(Name, Breed);
+        //     return newDog;
+        // }
+
+        public new IDog<double> Copy()
         {
             var newDog = new Dog(Name, Breed);
             return newDog;
